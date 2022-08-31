@@ -1,0 +1,15 @@
+---
+import BlogListItem from "~/components/widgets/BlogListItem.astro";
+
+const { posts } = Astro.props;
+---
+
+<ul>
+  {
+  posts.map((post) => (
+  <li class="mb-10 md:mb-16">
+    <BlogListItem post={post} />
+  </li>
+  ))
+  }
+</ul>
